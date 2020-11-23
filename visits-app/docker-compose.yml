@@ -1,0 +1,14 @@
+#Docker compose version used
+version: '3'
+
+#Here are the containers I want created
+services:
+# container list
+  redis-server:
+  #standard image
+    image: 'redis'
+  node-app:
+  #use dockerfile mentioned at .
+    build: .
+    ports:
+      - "8180:8081"
